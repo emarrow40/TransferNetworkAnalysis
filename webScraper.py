@@ -52,8 +52,8 @@ async def extract_stream(s: ClientSession, club: ClubIncomeParser) -> List[ClubS
         return list(club_stream)
 
 def load_all(clubs: List[ClubIncomeParser], streams: List[ClubStreamParser]) -> None:
-    with GraphDatabase.driver(uri="bolt://localhost:7687", auth=('neo4j', 'top50')) as driver:
-        with driver.session(database="netspendtop50") as session:
+    with GraphDatabase.driver() as driver:
+        with driver.session() as session:
             session.write_transaction(clear_db)
             session.write_transaction(set_constraints)
             for club in clubs:
