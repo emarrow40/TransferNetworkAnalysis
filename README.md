@@ -10,8 +10,7 @@ instance of neo4j and processing it through the graph tool neo4j Bloom helped fa
 
 <img src="img/atletico.PNG" width="650">
 
-Also, through utilizing Cypher queries, data was extracted from the graph database and processed with pandas into tabular form to
-provide quantitative insights.
+Also, through utilizing Cypher queries, data was extracted from the graph database and processed with pandas into tabular form to provide quantitative insights.
 
 ```python
 from neo4j import GraphDatabase
